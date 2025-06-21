@@ -27,7 +27,7 @@ jobs:
         run: |
           aws s3 cp deploy.zip s3://${{ secrets.AWS_BUCKET }}/deploy.zip
 
-      - name: 55.현재 진행중인 AWS Deploy ID 가져오고 중단 시킨다. 
+      - name: 5.현재 진행중인 AWS Deploy ID 가져오고 중단 시킨다. 
         run: |
           DEPLOYMENTS=$(aws deploy list-deployments \
             --application-name simple-web-content \
